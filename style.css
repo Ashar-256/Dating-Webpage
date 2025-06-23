@@ -1,0 +1,192 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "DynaPuff", system-ui;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:
+    "wdth" 100;
+    margin: 0;
+    padding: 0;
+    background: #77459c;
+    color: #292828;
+}
+
+header {
+    background: #ff69b4;
+    color: white;
+    padding: 0.5rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+}
+
+header img{
+    height: 2.5rem;
+    padding-left: 20px;
+}
+
+#hlogo{
+    display: flex;
+    gap: 20px;
+}
+
+#hButton{
+    display: flex;
+}
+
+#fButton{
+    background-color: #ff69b4;
+    color: white;
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+    width: 100px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#fButton:hover{
+    background-color: #ff85c1;
+}
+
+header h1{
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+      
+}
+header p{
+    min-width: 300px;
+}
+
+#introPicSection{
+    display: flex;
+    justify-content: space-between;
+    max-height: 650px;
+}
+
+#intro {
+    text-align: center;
+    justify-items: center;
+    align-items: center;
+    padding-top: 100px;
+    padding-left: 100px;
+    max-width: 650px;
+    min-width: 404px;
+    background: linear-gradient(-270deg, #eb6368 0%, #77459c  100%);
+}
+
+#intro h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    max-width: 650px;
+}
+
+#intro #TermsConditions{
+    padding-top: 10px;
+    padding-bottom: 30px;
+    font-size: 0.7rem;
+    color: #ffd7f0;
+}
+
+#TermsConditions a{
+    color: #fff;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+#TermsConditions a:hover{
+    color: #ffd7f0;
+}
+
+#intro p{
+    font-size: 1.2rem;
+}
+
+#introPicSection img{
+    padding-right: 100px;
+    width: 550px;
+    height: auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+button {
+    display: inline-block;
+    background-color: #ff69b4;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, padding 0.35s ease-in-out;
+}
+
+button a{
+    text-decoration: none;
+    font-family: inherit;
+    color: white;
+}
+
+button:hover {
+    padding: 1rem 2.2rem;
+    background-color: #ff85c1;
+}
+
+.ProfileTitle{
+    margin: 0%;
+    padding-top: 100px;
+    text-align: center;
+    background:#f8f8f8 ;
+}
+
+#profiles {
+    padding-top: 20px;
+    padding-bottom: 100px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    background:#f8f8f8 ;
+}
+
+.profile-card {
+    background-color:#f4bcd8;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 1rem;
+    width: 200px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    transition: padding 0.35s ease-in-out;
+}
+
+.profile-card:hover{
+    background-color: rgb(244, 197, 220);
+    padding: 1rem 1.2rem;
+}
+
+.profile-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+#footerSection{
+    text-align: center;
+    padding: 2rem;
+    background:#292828;
+}
+
+footer {
+    background:#292828;
+    padding: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666;
+}
