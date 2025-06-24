@@ -21,6 +21,8 @@ header {
     display: flex;
     gap: 1rem;
     justify-content: space-between;
+    align-items: center; /* Align items vertically in header */
+    flex-wrap: wrap; /* Allow header items to wrap on smaller screens */
 }
 
 header img{
@@ -31,10 +33,13 @@ header img{
 #hlogo{
     display: flex;
     gap: 20px;
+    align-items: center;
 }
 
 #hButton{
     display: flex;
+    gap: 10px; /* Add gap between buttons */
+    padding-right: 20px; /* Add padding to the right */
 }
 
 #fButton{
@@ -46,6 +51,7 @@ header img{
     border-radius: 30px;
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
+    white-space: nowrap; /* Prevent buttons from wrapping text */
 }
 
 #fButton:hover{
@@ -66,6 +72,7 @@ header p{
     display: flex;
     justify-content: space-between;
     max-height: 650px;
+    flex-wrap: wrap;
 }
 
 #intro {
@@ -77,6 +84,7 @@ header p{
     max-width: 650px;
     min-width: 404px;
     background: linear-gradient(-270deg, #eb6368 0%, #77459c  100%);
+    flex-grow: 1; 
 }
 
 #intro h2 {
@@ -112,6 +120,9 @@ header p{
     height: auto;
     padding-top: 50px;
     padding-bottom: 50px;
+    flex-shrink: 1;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 button {
@@ -189,4 +200,185 @@ footer {
     text-align: center;
     font-size: 0.9rem;
     color: #666;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Large screens (desktops) */
+@media (min-width: 1200px) {
+    #introPicSection {
+        flex-wrap: nowrap;
+        max-height: 650px;
+    }
+    #intro {
+        padding-left: 100px;
+        padding-top: 50px;
+        padding-right: 0;
+    }
+    #introPicSection img {
+        padding-right: 100px;
+        width: 550px;
+    }
+}
+
+@media (max-width: 1200px) {
+    #introPicSection {
+        flex-wrap: nowrap;
+        max-height: 700px;
+    }
+    #intro {
+        padding-left: 25px;
+        padding-top: 50px;
+        padding-right: 0;
+    }
+    #introPicSection img {
+        padding-right: 25px;
+        width: 450px;
+        height: 100%;
+    }
+}
+
+/* Medium screens (tablets) */
+@media (max-width: 1024px) {
+    #introPicSection {
+        flex-direction: column;
+        max-height: none;
+    }
+    #intro {
+        padding: 50px 20px 0px 20px;
+        min-width: unset;
+        max-width: 100%;
+        background: linear-gradient(-180deg, #eb6368 0%, #77459c  100%);
+
+    }
+    #intro h2 {
+        font-size: 2rem;
+    }
+    #intro p {
+        font-size: 1rem;
+    }
+    #introPicSection img {
+        padding: 20px;
+        width: 60%;
+        margin: 0 auto;
+    }
+    .ProfileTitle {
+        padding-top: 50px;
+    }
+    #profiles {
+        padding-bottom: 50px;
+        gap: 1rem;
+    }
+    .profile-card {
+        width: 180px;
+        padding: 0.8rem;
+    }
+}
+
+/* Small screens (mobile phones) */
+@media (max-width: 768px) {
+    header {
+        padding: 0.5rem;
+    }
+    header img {
+        height: 2rem;
+        padding-left: 10px;
+    }
+    #hlogo p {
+        display: none;
+    }
+    #hButton {
+        gap: 5px;
+        margin-top: 5px;
+    }
+    #fButton {
+        width: 80%;
+        margin: 0 auto;
+        padding: 0.4rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    #intro {
+        padding: 30px 15px;
+    }
+    #intro h2 {
+        font-size: 1.8rem;
+    }
+    #intro p {
+        font-size: 0.9rem;
+    }
+    #intro #TermsConditions {
+        font-size: 0.6rem;
+        padding-bottom: 20px;
+    }
+    #introPicSection img {
+        padding: 15px;
+        width: 90%;
+    }
+    button {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+    }
+    .ProfileTitle {
+        padding-top: 30px;
+        font-size: 1.5rem;
+    }
+    #profiles {
+        padding-bottom: 30px;
+        gap: 0.8rem;
+    }
+    .profile-card {
+        width: 150px;
+        padding: 0.7rem;
+    }
+    .profile-card h3 {
+        font-size: 1rem;
+    }
+    .profile-card p {
+        font-size: 0.8rem;
+    }
+    #footerSection {
+        padding: 1rem;
+    }
+    footer {
+        font-size: 0.8rem;
+    }
+}
+
+/* Extra small screens (mobile landscape/small phones) */
+@media (max-width: 480px) {
+    header img {
+        height: 1.8rem;
+    }
+    #hlogo p {
+        font-size: 0.8rem;
+    }
+    #fButton {
+        width: 90%;
+        padding: 0.3rem 0.8rem;
+        font-size: 0.8rem;
+    }
+    #intro h2 {
+        font-size: 1.5rem;
+    }
+    #intro p {
+        font-size: 0.8rem;
+    }
+    button {
+        padding: 0.7rem 1.2rem;
+        font-size: 0.8rem;
+    }
+    .ProfileTitle {
+        font-size: 1.3rem;
+    }
+    .profile-card {
+        width: 130px;
+        padding: 0.6rem;
+    }
+    .profile-card h3 {
+        font-size: 0.9rem;
+    }
+    .profile-card p {
+        font-size: 0.7rem;
+    }
 }
